@@ -1,434 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Padi Arunkumar - Portfolio</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        poppins: ['Poppins', 'sans-serif'],
-                    },
-                    colors: {
-                        'v-dark': '#121212',
-                        'v-card': '#1e1e1f',
-                        'v-border': '#383838',
-                        'v-accent': '#ffdb70',
-                        'v-accent-hover': '#ffea9e',
-                        'v-text': '#fafafa',
-                        'v-text-muted': '#d6d6d6',
-                        'v-text-light': '#b3b3b3'
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #121212;
-            color: #fafafa;
-        }
-        
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #121212;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #383838;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #ffdb70;
-        }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Padi Arunkumar — Ad Intelligence & Data Operations Analyst</title>
+<meta name="description" content="Portfolio and résumé of Padi Arunkumar, Ad Intelligence Classification & Data Operations Analyst at Nielsen, Bengaluru." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#12192E;
+    --ink-2:#1C2440;
+    --paper:#F6F4EF;
+    --paper-2:#EEEAE0;
+    --slate:#4A4E58;
+    --amber:#E8A33D;
+    --signal:#C8102E;
+    --line:#D9D4C6;
+    --line-dark:#333B5C;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --display: 'Space Grotesk', sans-serif;
+    --body: 'Inter', sans-serif;
+  }
 
-        .fade-in {
-            animation: fadeIn 0.5s ease-in-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--slate);
+    font-family:var(--body);
+    line-height:1.55;
+  }
 
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -1px;
-            width: 1px;
-            height: 100%;
-            background: #383838;
-        }
-        
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            top: 5px;
-            left: -5px;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #ffdb70;
-            box-shadow: 0 0 0 4px #1e1e1f;
-        }
-    </style>
+  a{ color:inherit; }
+
+  :focus-visible{
+    outline: 2px solid var(--amber);
+    outline-offset: 3px;
+  }
+
+  .wrap{
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    background: radial-gradient(120% 140% at 15% -10%, #202B4E 0%, var(--ink) 55%, #0D1220 100%);
+    color: var(--paper);
+    padding-top: 56px;
+    position: relative;
+    overflow:hidden;
+  }
+
+  .eyebrow{
+    font-family: var(--mono);
+    font-size: 12.5px;
+    letter-spacing: .12em;
+    color: var(--amber);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom: 22px;
+  }
+
+  .live-dot{
+    width:7px; height:7px; border-radius:50%;
+    background: var(--signal);
+    box-shadow: 0 0 0 0 rgba(200,16,46,.7);
+    animation: pulse 2.2s infinite;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .live-dot{ animation:none; }
+  }
+  @keyframes pulse{
+    0%   { box-shadow: 0 0 0 0 rgba(200,16,46,.55); }
+    70%  { box-shadow: 0 0 0 8px rgba(200,16,46,0); }
+    100% { box-shadow: 0 0 0 0 rgba(200,16,46,0); }
+  }
+
+  h1.name{
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(2.6rem, 6vw, 4.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    margin: 0 0 14px;
+  }
+
+  .role-line{
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(1.05rem, 2.4vw, 1.35rem);
+    color: #C9CEE0;
+    margin: 0 0 26px;
+    max-width: 46ch;
+  }
+
+  .contact-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap: 10px 18px;
+    font-family: var(--mono);
+    font-size: 13px;
+    color:#B7BCD4;
+    padding-bottom: 40px;
+  }
+  .contact-row a{ text-decoration:none; border-bottom:1px dotted transparent; }
+  .contact-row a:hover{ border-color:#B7BCD4; }
+
+  /* Ticker */
+  .ticker-track{
+    border-top: 1px solid var(--line-dark);
+    background: #0E1426;
+    overflow:hidden;
+    white-space: nowrap;
+  }
+  .ticker-inner{
+    display:inline-block;
+    padding: 13px 0;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    letter-spacing: .08em;
+    color: #93A0C9;
+    animation: scroll 26s linear infinite;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .ticker-inner{ animation:none; }
+  }
+  .ticker-inner span{ margin: 0 26px; }
+  .ticker-inner .tag-amber{ color: var(--amber); }
+  @keyframes scroll{
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ---------- SECTIONS ---------- */
+  main{ background: var(--paper); }
+
+  section{
+    padding: 56px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  section:last-of-type{ border-bottom:none; }
+
+  .label{
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .14em;
+    color: var(--amber);
+    background: #12192E;
+    display:inline-block;
+    padding: 4px 9px;
+    border-radius: 3px;
+    margin-bottom: 18px;
+  }
+
+  h2.section-title{
+    font-family: var(--display);
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    color: var(--ink);
+    margin: 0 0 22px;
+    font-weight: 600;
+  }
+
+  .summary-text{
+    font-size: 1.02rem;
+    max-width: 68ch;
+    color: #383D48;
+  }
+
+  /* Experience log entries */
+  .entry{
+    display:grid;
+    grid-template-columns: 128px 1fr;
+    gap: 20px;
+    padding: 22px 0;
+    border-top: 1px solid var(--line);
+  }
+  .entry:first-of-type{ border-top:none; padding-top:0; }
+
+  .entry-date{
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--slate);
+    padding-top: 3px;
+  }
+  .entry-date .status{
+    display:inline-block;
+    margin-top: 8px;
+    font-size: 10.5px;
+    letter-spacing: .1em;
+    color: #fff;
+    background: var(--signal);
+    padding: 2px 6px;
+    border-radius: 2px;
+  }
+
+  .entry-role{
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 1.08rem;
+    color: var(--ink);
+    margin: 0 0 3px;
+  }
+  .entry-org{
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--slate);
+    margin-bottom: 12px;
+  }
+  .entry ul{
+    margin: 0;
+    padding-left: 18px;
+  }
+  .entry li{
+    margin-bottom: 7px;
+    font-size: .96rem;
+  }
+  .entry li::marker{ color: var(--amber); }
+
+  @media (max-width: 620px){
+    .entry{ grid-template-columns: 1fr; gap:6px; }
+    .entry-date{ padding-top:0; }
+  }
+
+  /* Skills as classification chips */
+  .chip-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap: 10px;
+  }
+  .chip{
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--ink);
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    padding: 8px 12px;
+    border-radius: 3px;
+  }
+
+  /* Two column grid for languages/education/hobbies */
+  .meta-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  @media (max-width: 700px){
+    .meta-grid{ grid-template-columns: 1fr; }
+  }
+  .meta-block h3{
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: .1em;
+    color: var(--amber);
+    text-transform: uppercase;
+    margin: 0 0 10px;
+  }
+  .meta-block p{ margin:0; font-size: .95rem; color:#383D48; }
+
+  /* Footer / contact CTA */
+  footer{
+    background: var(--ink);
+    color: #C9CEE0;
+    padding: 46px 0 40px;
+  }
+  footer .label{ background:transparent; padding:0; }
+  footer h2{
+    font-family: var(--display);
+    color: #fff;
+    font-size: 1.6rem;
+    margin: 10px 0 18px;
+  }
+  .btn{
+    display:inline-block;
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing:.04em;
+    color: var(--ink);
+    background: var(--amber);
+    padding: 12px 20px;
+    border-radius: 3px;
+    text-decoration:none;
+    font-weight: 600;
+  }
+  .btn:hover{ background:#f0b862; }
+  .foot-meta{
+    margin-top: 26px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: #7C84A8;
+  }
+</style>
 </head>
-<body class="min-h-screen py-10 px-4 md:px-10 lg:px-20 flex justify-center items-start">
+<body>
 
-    <!-- Main Container -->
-    <div class="max-w-6xl w-full flex flex-col xl:flex-row gap-6 relative">
-        
-        <!-- SIDEBAR (Left) -->
-        <aside class="bg-v-card border border-v-border rounded-2xl p-6 xl:w-1/4 xl:sticky xl:top-10 h-max relative z-20">
-            <!-- Mobile Toggle Button -->
-            <button id="contact-toggle" class="xl:hidden absolute top-0 right-0 bg-gradient-to-br from-[#404040] to-[#202020] text-v-accent border border-v-border border-t-0 border-r-0 rounded-bl-2xl rounded-tr-2xl px-4 py-3 text-xs font-semibold shadow-md z-10 transition hover:text-v-accent-hover">
-                Show Contacts
-            </button>
-
-            <!-- Profile Info -->
-            <div class="flex xl:flex-col items-center xl:items-center gap-4 xl:gap-6">
-                <!-- Avatar placeholder -->
-                <div class="w-24 h-24 xl:w-36 xl:h-36 rounded-2xl bg-gradient-to-br from-[#404040] to-[#202020] flex items-center justify-center text-4xl text-v-text-muted shadow-lg border border-v-border overflow-hidden shrink-0">
-                    PA
-                </div>
-                
-                <div class="text-left xl:text-center">
-                    <h1 class="text-2xl xl:text-3xl font-semibold tracking-wide text-v-text mb-2">Padi<br class="hidden xl:block"> Arunkumar</h1>
-                    <span class="bg-[#2b2b2c] text-v-text-light text-xs font-medium px-4 py-1.5 rounded-lg inline-block">Ad Intel Analyst</span>
-                </div>
-            </div>
-
-            <!-- Contact Details (Hidden on mobile by default) -->
-            <div id="contact-info" class="hidden xl:block mt-8 overflow-hidden transition-all duration-300">
-                <hr class="border-v-border mb-6">
-                
-                <ul class="flex flex-col gap-6">
-                    <li class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-xl bg-[#2b2b2c] text-v-accent flex items-center justify-center border border-v-border shrink-0 shadow-sm">
-                            <i class="fa-regular fa-envelope"></i>
-                        </div>
-                        <div class="overflow-hidden">
-                            <p class="text-xs text-v-text-light uppercase font-medium mb-0.5">Email</p>
-                            <a href="mailto:Arunpadi.info@gmail.com" class="text-sm text-v-text hover:text-v-accent transition truncate block">Arunpadi.info@gmail.com</a>
-                        </div>
-                    </li>
-                    
-                    <li class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-xl bg-[#2b2b2c] text-v-accent flex items-center justify-center border border-v-border shrink-0 shadow-sm">
-                            <i class="fa-solid fa-mobile-screen"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-v-text-light uppercase font-medium mb-0.5">Phone</p>
-                            <a href="tel:+918106305097" class="text-sm text-v-text hover:text-v-accent transition">+91 8106305097</a>
-                        </div>
-                    </li>
-                    
-                    <li class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-xl bg-[#2b2b2c] text-v-accent flex items-center justify-center border border-v-border shrink-0 shadow-sm">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-v-text-light uppercase font-medium mb-0.5">Location</p>
-                            <address class="text-sm text-v-text not-italic">Bengaluru, India</address>
-                        </div>
-                    </li>
-                </ul>
-
-                <hr class="border-v-border mt-6 mb-6">
-                
-                <!-- Socials Placeholder -->
-                <div class="flex justify-center xl:justify-start gap-4">
-                    <a href="#" class="text-v-text-muted hover:text-v-accent transition"><i class="fa-brands fa-linkedin text-lg"></i></a>
-                    <a href="#" class="text-v-text-muted hover:text-v-accent transition"><i class="fa-brands fa-github text-lg"></i></a>
-                </div>
-            </div>
-        </aside>
-
-        <!-- MAIN CONTENT (Right) -->
-        <main class="bg-v-card border border-v-border rounded-2xl p-6 md:p-8 xl:w-3/4 relative overflow-hidden">
-            
-            <!-- Navbar -->
-            <nav class="absolute top-0 right-0 bg-[#2b2b2c]/90 backdrop-blur-sm border-b border-l border-v-border rounded-bl-2xl rounded-tr-2xl z-10 w-full md:w-auto rounded-tl-2xl md:rounded-tl-none">
-                <ul class="flex justify-center md:justify-start gap-6 px-8 py-4">
-                    <li><button onclick="switchTab('about')" id="nav-about" class="nav-btn text-v-accent font-medium transition hover:text-v-accent">About</button></li>
-                    <li><button onclick="switchTab('resume')" id="nav-resume" class="nav-btn text-v-text-muted font-medium transition hover:text-v-text">Resume</button></li>
-                    <li><button onclick="switchTab('contact')" id="nav-contact" class="nav-btn text-v-text-muted font-medium transition hover:text-v-text">Contact</button></li>
-                </ul>
-            </nav>
-
-            <div class="mt-16 md:mt-10">
-                <!-- ================= ABOUT SECTION ================= -->
-                <section id="sec-about" class="tab-content fade-in block">
-                    <h2 class="text-3xl font-semibold text-v-text mb-6 relative pb-4 inline-block">
-                        About Me
-                        <span class="absolute bottom-0 left-0 w-10 h-1 bg-v-accent rounded-full"></span>
-                    </h2>
-                    
-                    <div class="text-v-text-muted leading-relaxed text-[15px] space-y-4 font-light">
-                        <p>
-                            Detail-oriented Ad Intel Analyst with expertise in monitoring and analyzing advertising data across multiple media platforms, including TV, Radio, Print, and Digital. Proficient in using Nielsen tools and bespoke software to track competitor strategies, identify trends, and provide actionable insights to optimize media campaigns. 
-                        </p>
-                        <p>
-                            Strong ability to interpret complex data, ensuring accurate classification and reporting for strategic decision-making. Skilled in identifying emerging industry trends and delivering reports that enhance marketing and advertising effectiveness. Adept at ensuring compliance with media-specific guidelines to ensure high-quality data integrity.
-                        </p>
-                    </div>
-
-                    <!-- What I do -->
-                    <h3 class="text-xl font-semibold text-v-text mt-10 mb-6">What I'm Doing</h3>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-gradient-to-br from-[#2b2b2c] to-v-card border border-v-border rounded-xl p-6 flex gap-4 shadow-sm relative overflow-hidden">
-                            <div class="absolute top-0 right-0 p-4 opacity-5 text-6xl"><i class="fa-solid fa-chart-line"></i></div>
-                            <div class="text-v-accent text-3xl shrink-0"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-                            <div>
-                                <h4 class="text-v-text font-semibold mb-2">Media Monitoring</h4>
-                                <p class="text-v-text-muted text-sm font-light">Tracking and analyzing cross-channel advertising data across TV, Radio, and Digital.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-gradient-to-br from-[#2b2b2c] to-v-card border border-v-border rounded-xl p-6 flex gap-4 shadow-sm relative overflow-hidden">
-                            <div class="absolute top-0 right-0 p-4 opacity-5 text-6xl"><i class="fa-solid fa-database"></i></div>
-                            <div class="text-v-accent text-3xl shrink-0"><i class="fa-solid fa-sitemap"></i></div>
-                            <div>
-                                <h4 class="text-v-text font-semibold mb-2">Data Operations</h4>
-                                <p class="text-v-text-muted text-sm font-light">Managing large datasets, optimizing data pipelines, and ensuring accuracy for strategic decisions.</p>
-                            </div>
-                        </div>
-
-                        <div class="bg-gradient-to-br from-[#2b2b2c] to-v-card border border-v-border rounded-xl p-6 flex gap-4 shadow-sm relative overflow-hidden">
-                            <div class="absolute top-0 right-0 p-4 opacity-5 text-6xl"><i class="fa-solid fa-bullseye"></i></div>
-                            <div class="text-v-accent text-3xl shrink-0"><i class="fa-solid fa-lightbulb"></i></div>
-                            <div>
-                                <h4 class="text-v-text font-semibold mb-2">Actionable Insights</h4>
-                                <p class="text-v-text-muted text-sm font-light">Interpreting complex data to track competitor strategies and identify emerging industry trends.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-gradient-to-br from-[#2b2b2c] to-v-card border border-v-border rounded-xl p-6 flex gap-4 shadow-sm relative overflow-hidden">
-                            <div class="absolute top-0 right-0 p-4 opacity-5 text-6xl"><i class="fa-solid fa-users-gear"></i></div>
-                            <div class="text-v-accent text-3xl shrink-0"><i class="fa-solid fa-headset"></i></div>
-                            <div>
-                                <h4 class="text-v-text font-semibold mb-2">Service Excellence</h4>
-                                <p class="text-v-text-muted text-sm font-light">History of managing interactions and driving operational quality while maintaining high standards.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- ================= RESUME SECTION ================= -->
-                <section id="sec-resume" class="tab-content hidden">
-                    <h2 class="text-3xl font-semibold text-v-text mb-8 relative pb-4 inline-block">
-                        Resume
-                        <span class="absolute bottom-0 left-0 w-10 h-1 bg-v-accent rounded-full"></span>
-                    </h2>
-
-                    <!-- Experience Timeline -->
-                    <div class="mb-10">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="w-12 h-12 bg-[#2b2b2c] rounded-xl flex items-center justify-center text-v-accent text-xl shadow-md border border-v-border">
-                                <i class="fa-solid fa-briefcase"></i>
-                            </div>
-                            <h3 class="text-2xl font-semibold text-v-text">Experience</h3>
-                        </div>
-
-                        <div class="ml-6 border-l border-v-border relative">
-                            
-                            <!-- Job 1 -->
-                            <div class="timeline-item relative pl-8 pb-8">
-                                <h4 class="text-lg font-semibold text-v-text">Ad Intel Classification Analyst</h4>
-                                <p class="text-sm text-v-accent font-medium mb-3 mt-1">Nielsen Media India Private Limited &bull; Bengaluru | 2024 - Present</p>
-                                <ul class="list-disc list-outside ml-4 text-v-text-muted text-sm font-light space-y-2">
-                                    <li>Monitored and classified advertising across multiple platforms (Press, TV, Radio) using custom software.</li>
-                                    <li>Utilized Nielsen applications to identify ads and inputted details to track competitor activity.</li>
-                                    <li>Adhered to coding rule guidelines and established business rules for identifying products/services.</li>
-                                    <li>Reviewed digitized print content and assigned page positions based on media-specific guidelines.</li>
-                                </ul>
-                            </div>
-
-                            <!-- Job 2 -->
-                            <div class="timeline-item relative pl-8 pb-8">
-                                <h4 class="text-lg font-semibold text-v-text">Analyst - Data Operations</h4>
-                                <p class="text-sm text-v-accent font-medium mb-3 mt-1">Nielsen Sports India Private Limited &bull; Bengaluru | Oct 2018 - Jan 2024</p>
-                                <ul class="list-disc list-outside ml-4 text-v-text-muted text-sm font-light space-y-2">
-                                    <li>Utilized statistical software for in-depth analysis of sports media data (clients like ESPN, CBS).</li>
-                                    <li>Analyzed complex datasets to identify trends and drove strategic business decisions.</li>
-                                    <li>Developed and optimized data pipelines, automating workflows to improve reporting efficiency.</li>
-                                    <li>Facilitated training sessions on data analysis techniques for junior analysts.</li>
-                                </ul>
-                            </div>
-
-                            <!-- Job 3 -->
-                            <div class="timeline-item relative pl-8">
-                                <h4 class="text-lg font-semibold text-v-text">Customer Service Executive</h4>
-                                <p class="text-sm text-v-accent font-medium mb-3 mt-1">Conneqt Business Solutions &bull; Hyderabad | Aug 2017 - Feb 2018</p>
-                                <ul class="list-disc list-outside ml-4 text-v-text-muted text-sm font-light space-y-2">
-                                    <li>Managed high volumes of customer interactions, maintaining strict resolution targets.</li>
-                                    <li>Assisted customers with product info, troubleshooting, and processed exchanges/claims.</li>
-                                    <li>Collaborated with internal teams (sales, logistics) to resolve complex issues.</li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- Education Timeline -->
-                    <div class="mb-10">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="w-12 h-12 bg-[#2b2b2c] rounded-xl flex items-center justify-center text-v-accent text-xl shadow-md border border-v-border">
-                                <i class="fa-solid fa-graduation-cap"></i>
-                            </div>
-                            <h3 class="text-2xl font-semibold text-v-text">Education</h3>
-                        </div>
-
-                        <div class="ml-6 border-l border-v-border relative">
-                            <!-- Degree -->
-                            <div class="timeline-item relative pl-8">
-                                <h4 class="text-lg font-semibold text-v-text">Bachelor of Technology (ECE)</h4>
-                                <p class="text-sm text-v-accent font-medium mb-3 mt-1">Jawaharlal Nehru Technological University &bull; Anantapur | Aug 2017</p>
-                                <p class="text-v-text-muted text-sm font-light">
-                                    Graduated with a focus on Electronics and Communication Engineering, establishing a strong foundation for analytical thinking and technical troubleshooting.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Skills & Hobbies Section -->
-                    <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
-                        <div>
-                            <h3 class="text-xl font-semibold text-v-text mb-6">Professional Skills</h3>
-                            <div class="flex flex-wrap gap-3">
-                                <span class="bg-[#2b2b2c] border border-v-border text-v-text px-4 py-2 rounded-lg text-sm shadow-sm">Data Collection & Analysis</span>
-                                <span class="bg-[#2b2b2c] border border-v-border text-v-text px-4 py-2 rounded-lg text-sm shadow-sm">Nielsen Tools</span>
-                                <span class="bg-[#2b2b2c] border border-v-border text-v-text px-4 py-2 rounded-lg text-sm shadow-sm">Cross-Channel Advertising</span>
-                                <span class="bg-[#2b2b2c] border border-v-border text-v-text px-4 py-2 rounded-lg text-sm shadow-sm">Competitor Strategy Tracking</span>
-                                <span class="bg-[#2b2b2c] border border-v-border text-v-text px-4 py-2 rounded-lg text-sm shadow-sm">Trend Identification</span>
-                                <span class="bg-[#2b2b2c] border border-v-border text-v-text px-4 py-2 rounded-lg text-sm shadow-sm">Data Pipeline Optimization</span>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-semibold text-v-text mb-6">Languages & Interests</h3>
-                            
-                            <div class="mb-5">
-                                <h4 class="text-sm font-medium text-v-text-muted mb-2">Languages</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="text-v-text text-sm">English</span> <span class="text-v-accent">&bull;</span>
-                                    <span class="text-v-text text-sm">Telugu</span> <span class="text-v-accent">&bull;</span>
-                                    <span class="text-v-text text-sm">Tamil</span>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h4 class="text-sm font-medium text-v-text-muted mb-2">Interests</h4>
-                                <div class="flex flex-wrap gap-3">
-                                    <span class="bg-[#2b2b2c] border border-v-border text-v-text px-3 py-1.5 rounded-lg text-xs shadow-sm"><i class="fa-solid fa-book text-v-accent mr-1"></i> Reading</span>
-                                    <span class="bg-[#2b2b2c] border border-v-border text-v-text px-3 py-1.5 rounded-lg text-xs shadow-sm"><i class="fa-solid fa-plane text-v-accent mr-1"></i> Travel</span>
-                                    <span class="bg-[#2b2b2c] border border-v-border text-v-text px-3 py-1.5 rounded-lg text-xs shadow-sm"><i class="fa-solid fa-utensils text-v-accent mr-1"></i> Cooking</span>
-                                    <span class="bg-[#2b2b2c] border border-v-border text-v-text px-3 py-1.5 rounded-lg text-xs shadow-sm"><i class="fa-solid fa-bullhorn text-v-accent mr-1"></i> Marketing</span>
-                                    <span class="bg-[#2b2b2c] border border-v-border text-v-text px-3 py-1.5 rounded-lg text-xs shadow-sm"><i class="fa-solid fa-chess-knight text-v-accent mr-1"></i> Strategy</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- ================= CONTACT SECTION ================= -->
-                <section id="sec-contact" class="tab-content hidden">
-                    <h2 class="text-3xl font-semibold text-v-text mb-8 relative pb-4 inline-block">
-                        Contact
-                        <span class="absolute bottom-0 left-0 w-10 h-1 bg-v-accent rounded-full"></span>
-                    </h2>
-
-                    <div class="mb-10 rounded-2xl overflow-hidden border border-v-border h-[300px]">
-                        <!-- Google Maps Iframe (Bengaluru centered) -->
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3888.0016964230744!2d77.59456269999999!3d12.9715987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0; filter: grayscale(100%) invert(90%) contrast(1.2);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-
-                    <h3 class="text-2xl font-semibold text-v-text mb-6">Contact Form</h3>
-                    
-                    <form action="#" class="space-y-6" onsubmit="event.preventDefault(); alert('Message sending functionality requires a backend server.');">
-                        <div class="flex flex-col md:flex-row gap-6">
-                            <div class="w-full relative">
-                                <input type="text" id="fullname" class="w-full bg-[#121212] border border-v-border rounded-xl px-5 py-4 text-v-text text-sm focus:outline-none focus:border-v-accent transition-colors" placeholder="Full name" required>
-                            </div>
-                            <div class="w-full relative">
-                                <input type="email" id="email" class="w-full bg-[#121212] border border-v-border rounded-xl px-5 py-4 text-v-text text-sm focus:outline-none focus:border-v-accent transition-colors" placeholder="Email address" required>
-                            </div>
-                        </div>
-                        
-                        <div class="w-full relative">
-                            <textarea id="message" rows="5" class="w-full bg-[#121212] border border-v-border rounded-xl px-5 py-4 text-v-text text-sm focus:outline-none focus:border-v-accent transition-colors resize-none" placeholder="Your Message" required></textarea>
-                        </div>
-                        
-                        <div class="flex justify-end">
-                            <button type="submit" class="bg-[#2b2b2c] border border-v-border text-v-accent hover:bg-v-accent hover:text-v-dark transition-colors font-medium px-6 py-4 rounded-xl flex items-center gap-2 shadow-sm">
-                                <i class="fa-regular fa-paper-plane"></i> Send Message
-                            </button>
-                        </div>
-                    </form>
-                </section>
-                
-            </div>
-        </main>
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="live-dot" aria-hidden="true"></span> MONITORING · UK MEDIA MARKETS</div>
+    <h1 class="name">Padi Arunkumar</h1>
+    <p class="role-line">Ad Intelligence Classification &amp; Data Operations Analyst — turning cross-channel ad data into clean, actionable records.</p>
+    <div class="contact-row">
+      <span>Bengaluru, India</span>
+      <a href="tel:+918106305097">+91 8106305097</a>
+      <a href="mailto:Arunpadi.info@gmail.com">Arunpadi.info@gmail.com</a>
     </div>
+  </div>
+  <div class="ticker-track" aria-hidden="true">
+    <div class="ticker-inner">
+      <span>PRESS</span><span class="tag-amber">·</span><span>TV</span><span class="tag-amber">·</span><span>RADIO</span><span class="tag-amber">·</span><span>DIGITAL</span><span class="tag-amber">·</span><span>UK MARKET</span><span class="tag-amber">·</span><span>NIELSEN CODING STANDARDS</span><span class="tag-amber">·</span><span>NEW PRODUCT RESEARCH</span><span class="tag-amber">·</span>
+      <span>PRESS</span><span class="tag-amber">·</span><span>TV</span><span class="tag-amber">·</span><span>RADIO</span><span class="tag-amber">·</span><span>DIGITAL</span><span class="tag-amber">·</span><span>UK MARKET</span><span class="tag-amber">·</span><span>NIELSEN CODING STANDARDS</span><span class="tag-amber">·</span><span>NEW PRODUCT RESEARCH</span><span class="tag-amber">·</span>
+    </div>
+  </div>
+</header>
 
-    <script>
-        // Tab Switching Logic
-        function switchTab(tabId) {
-            // Hide all sections
-            document.querySelectorAll('.tab-content').forEach(el => {
-                el.classList.add('hidden');
-                el.classList.remove('fade-in');
-            });
-            
-            // Reset nav colors
-            document.querySelectorAll('.nav-btn').forEach(el => {
-                el.classList.remove('text-v-accent');
-                el.classList.add('text-v-text-muted');
-            });
+<main>
+  <section id="summary">
+    <div class="wrap">
+      <span class="label">SUMMARY</span>
+      <h2 class="section-title">Profile</h2>
+      <p class="summary-text">Detail-oriented Ad Intel and Data Operations Analyst with over 7 years of experience monitoring, classifying, and quality-checking advertising and sports data across TV, Radio, Print, and Digital platforms, with current focus on UK media markets. Proficient in Nielsen applications and bespoke monitoring software to track competitor strategies, research and create new product records, and deliver actionable insights that support media campaign optimization. Skilled at daily quality audits, database research, and cross-functional feedback to strengthen data integrity.</p>
+    </div>
+  </section>
 
-            // Show target section with animation
-            const target = document.getElementById('sec-' + tabId);
-            target.classList.remove('hidden');
-            // Slight delay to re-trigger animation
-            setTimeout(() => {
-                target.classList.add('fade-in');
-            }, 10);
+  <section id="experience">
+    <div class="wrap">
+      <span class="label">LOG</span>
+      <h2 class="section-title">Experience</h2>
 
-            // Highlight active nav
-            const activeNav = document.getElementById('nav-' + tabId);
-            activeNav.classList.remove('text-v-text-muted');
-            activeNav.classList.add('text-v-accent');
-        }
+      <div class="entry">
+        <div class="entry-date">DEC 2025<span class="status">CURRENT</span></div>
+        <div>
+          <p class="entry-role">Sr. Data Entry / Operations Analyst 1</p>
+          <p class="entry-org">Nielsen Media India Pvt. Ltd. — Bengaluru, India</p>
+          <ul>
+            <li>Perform daily quality checks on classified UK market advertising data across TV, Radio, and Print to ensure accuracy and adherence to Nielsen coding standards.</li>
+            <li>Conduct research on new products and brands, creating and maintaining new product database records within Nielsen tools.</li>
+            <li>Provide structured feedback to classification analysts and cross-functional teams to improve coding accuracy.</li>
+            <li>Lead root-cause investigations on data discrepancies and drive corrective action to prevent repeat issues.</li>
+            <li>Mentor new team members on quality-check procedures and Nielsen database tools.</li>
+          </ul>
+        </div>
+      </div>
 
-        // Mobile Sidebar Toggle
-        const toggleBtn = document.getElementById('contact-toggle');
-        const contactInfo = document.getElementById('contact-info');
+      <div class="entry">
+        <div class="entry-date">JAN 2024 — DEC 2025</div>
+        <div>
+          <p class="entry-role">Ad Intel Classification Analyst</p>
+          <p class="entry-org">Nielsen Media India Pvt. Ltd. — Bengaluru, India</p>
+          <ul>
+            <li>Monitored and classified advertising across UK media markets (Press, TV, Radio) using custom-built monitoring software.</li>
+            <li>Input key advertising details into a database, enabling clients to enhance campaigns and track competitor activity.</li>
+            <li>Investigated and resolved database discrepancies through daily maintenance procedures.</li>
+            <li>Reviewed digitized print content from consumer magazines and newspapers using proprietary platforms.</li>
+          </ul>
+        </div>
+      </div>
 
-        toggleBtn.addEventListener('click', () => {
-            if (contactInfo.classList.contains('hidden')) {
-                contactInfo.classList.remove('hidden');
-                toggleBtn.innerText = 'Hide Contacts';
-                contactInfo.classList.add('fade-in');
-            } else {
-                contactInfo.classList.add('hidden');
-                toggleBtn.innerText = 'Show Contacts';
-                contactInfo.classList.remove('fade-in');
-            }
-        });
-    </script>
+      <div class="entry">
+        <div class="entry-date">OCT 2018 — JAN 2024</div>
+        <div>
+          <p class="entry-role">Analyst – Data Operations</p>
+          <p class="entry-org">Nielsen Sports India Pvt. Ltd. — Bengaluru, India</p>
+          <ul>
+            <li>Supported media companies such as ESPN, CBS, TNT, and ABC with sports-related historical and current event statistics.</li>
+            <li>Analyzed complex data sets to identify trends, driving strategic business decisions.</li>
+            <li>Facilitated training sessions on data analysis techniques for junior analysts.</li>
+            <li>Developed and optimized data pipelines, automating workflows for reporting.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">AUG 2017 — FEB 2018</div>
+        <div>
+          <p class="entry-role">Customer Service Executive</p>
+          <p class="entry-org">Conneqt Business Solutions — Hyderabad, India</p>
+          <ul>
+            <li>Managed a high volume of customer interactions while meeting first-response and resolution targets.</li>
+            <li>Processed refunds, exchanges, and warranty claims in line with company policy.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <span class="label">CLASSIFICATION</span>
+      <h2 class="section-title">Skills</h2>
+      <div class="chip-grid">
+        <span class="chip">Data collection &amp; QA</span>
+        <span class="chip">Cross-channel ad analysis</span>
+        <span class="chip">Nielsen tools</span>
+        <span class="chip">New product research</span>
+        <span class="chip">Database creation &amp; maintenance</span>
+        <span class="chip">Discrepancy resolution</span>
+        <span class="chip">Trend &amp; spend analysis</span>
+        <span class="chip">Team mentoring</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="meta">
+    <div class="wrap meta-grid">
+      <div class="meta-block">
+        <h3>Languages</h3>
+        <p>English · Telugu · Tamil</p>
+      </div>
+      <div class="meta-block">
+        <h3>Education</h3>
+        <p>B.Tech (ECE), Jawaharlal Nehru Technological University, Anantapur — Aug 2017</p>
+      </div>
+      <div class="meta-block">
+        <h3>Interests</h3>
+        <p>Reading · Travel · Cooking · Marketing · Analytics · Strategy</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="label" style="color:var(--amber);">GET IN TOUCH</span>
+    <h2>Let's talk about your media data.</h2>
+    <a class="btn" href="mailto:Arunpadi.info@gmail.com">Email Padi →</a>
+    <div class="foot-meta">Bengaluru, India · +91 8106305097 · Arunpadi.info@gmail.com</div>
+  </div>
+</footer>
+
 </body>
 </html>
